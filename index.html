@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="converter-container">
+    <h1><i class="fas fa-exchange-alt icon"></i>Crypto Converter</h1>
+    <div class="input-group">
+      <input type="number" id="amount" placeholder="Enter amount">
+      <select id="crypto">
+        <option value="BTC">Bitcoin (BTC)</option>
+        <option value="ETH">Ethereum (ETH)</option>
+        <option value="LTC">Litecoin (LTC)</option>
+        <!-- Add more cryptocurrencies as needed -->
+      </select>
+    </div>
+    <div class="input-group">
+      <input type="number" id="convertedAmount" placeholder="Converted amount" disabled>
+      <select id="fiat">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <!-- Add more fiat currencies as needed -->
+      </select>
+    </div>
+    <button id="convertBtn">Convert</button>
+    <div id="loading" style="display:none;">
+      <i class="fas fa-spinner fa-spin"></i> Converting...
+    </div>
+    <div class="result" id="conversionResult" style="display:none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
